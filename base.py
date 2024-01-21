@@ -30,3 +30,9 @@ print(id(temp_imut), id(temp_mut), temp_mut)
 temp_imut = temp_imut + 1
 temp_mut = temp_mut + [1]
 print(id(temp_imut), id(temp_mut), temp_mut)
+
+v = [2]
+match v:
+    case 1: print('case 1')
+    case _ if isinstance(v, int): print(f'int {v}')
+    case _ if isinstance(v, list): print(f'list {v}')
